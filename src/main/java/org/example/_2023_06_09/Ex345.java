@@ -1,29 +1,30 @@
 package org.example._2023_06_09;
 
-import java.util.Objects;
-
-public class Ex345 extends Object {
+public class Ex345 {
 
     String name;
+
+    public Ex345(String name) {
+        this.name = name;
+    }
 
     @Override
     public String toString() {
         return "Ex345: [" + name + "]";
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Ex345 ex345)) return false;
-        return Objects.equals(name, ex345.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name);
+    public static void get(int[] s) {
+        for (int j = 0; j < s.length; j++) {
+            if(s[j] %2 == 0) {
+                System.out.println(s[j]);
+            }
+        }
     }
 
     public static void main(String[] args) {
-        System.out.println(new Ex345());
+       Ex345 ex345 = new Ex345("345");
+                     new Ex345("345");
+
+                     get(new int[]{1});
     }
 }
