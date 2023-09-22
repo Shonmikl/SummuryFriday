@@ -4,20 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Team {
+public class Team<T extends Participant> {
     private String name;
-    private List<Participant> participantList = new ArrayList<>();
+    private List<T> participantList = new ArrayList<>();
 
     public Team(String name) {
         this.name = name;
     }
 
+    public Team(String name, List<T> participantList) {
+        this.name = name;
+        this.participantList = participantList;
+    }
+
     public void addNewParticipant(Participant participant) {
-        participantList.add(participant);
+        participantList.add((T) participant);
         System.out.println("Participant [" + participant + "] was added to the team [" + name + "]");
     }
 
-    public void playWith(Team team) {
+    //team.playWith(team2);
+    public void playWith(Team<T> team) {
         String winnerName;
         Random random = new Random();
 
