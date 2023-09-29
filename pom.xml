@@ -34,5 +34,21 @@
       <artifactId>javafaker</artifactId>
       <version>1.0.2</version>
     </dependency>
+      <dependency>
+          <groupId>org.junit.jupiter</groupId>
+          <artifactId>junit-jupiter</artifactId>
+          <version>5.8.1</version>
+          <scope>compile</scope>
+      </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-testng</artifactId>
+      <version>0.5.0</version>
+    </dependency>
+      <dependency>
+          <groupId>org.mockito</groupId>
+          <artifactId>mockito-junit-jupiter</artifactId>
+          <version>5.3.1</version>
+      </dependency>
   </dependencies>
 </project>
