@@ -17,6 +17,9 @@ public class Generator {
             case STUDENT -> participant = new Student(name, age);
         }
         return (T) participant;
+        /**
+         * git@github.com:YefrAlex/HW_Summary.git
+         */
     }
 
     //todo

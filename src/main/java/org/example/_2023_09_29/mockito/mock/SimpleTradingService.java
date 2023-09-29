@@ -5,7 +5,8 @@ public class SimpleTradingService implements TradingService {
 	TradeRepository tradeRepository;
 	AuditService auditService;
 
-	public SimpleTradingService(TradeRepository tradeRepository, AuditService auditService) {
+	public SimpleTradingService(TradeRepository tradeRepository,
+								AuditService auditService) {
 		this.tradeRepository = tradeRepository;
 		this.auditService = auditService;
 	}

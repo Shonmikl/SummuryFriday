@@ -21,12 +21,13 @@ class SimpleAuditServiceTest {
     AuditService auditService;
 
 	@Test
-	public void testAuditLogEntryMadeForNewTrade() throws Exception {
+	public void testAuditLogEntryMadeForNewTrade() {
 	//	Trade trade = new Trade("Ref 1.txt", "Description 1.txt");
 
 		when(tradeRepository.createTrade(trade)).thenReturn(anyLong());
 
-		TradingService tradingService = new SimpleTradingService(tradeRepository, auditService);
+		TradingService tradingService
+				= new SimpleTradingService(tradeRepository, auditService);
 		tradingService.createTrade(trade);
 
 		verify(auditService).logNewTrade(trade);
