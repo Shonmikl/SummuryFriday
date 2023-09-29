@@ -17,7 +17,7 @@ class TestSpyDemo {
 	List<String> listSpy = new ArrayList<>();
 
 	@Test
-	public void testSpyReturnsRealValues() throws Exception {
+	public void testSpyReturnsRealValues() {
 		String str = "Test Spy";
 
 		listSpy.add(str);
